@@ -35,51 +35,63 @@ img {
   max-width: 100%;
   height: auto;
 }
-header {
-  position: relative;
-  z-index: 999;
-}
+
 /* Nav */
-nav {
+header {
+  background: #ae1d24;
   position: fixed;
   width: 100%;
-  background: #ae1d24;
-  padding: 1.5em;
+  z-index: 999;
+  padding: 1em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .nav-bar {
   background: #ae1d24;
   position: fixed;
   width: 100%;
-  height: auto;
+  max-height: auto;
   left: -100%;
   top: 4.5em;
   z-index: 999;
+}
+
+.hamburger {
+  color: #fff;
+  font-size: 2rem;
+  transition: 0.2 ease;
+  cursor: pointer;
+}
+
+.hamburger:hover {
+  transition: 0.3s ease-in-out;
 }
 
 .active {
   left: 0;
   transition: 0.3s ease;
 }
-
-.hamburger {
-  color: #fff;
-  font-size: 2rem;
-  cursor: pointer;
-}
-.nav-links {
-  display: block;
-  color: #ecf0f1;
+.nav-list {
   font-weight: bold;
-  padding: 1em;
   text-transform: uppercase;
   font-size: 1.05rem;
 }
-
-.nav-links:hover {
-  transition: right 0.3s ease-in;
-  background: rgb(52, 73, 94);
+.nav-links {
+  display: block;
+  width: 100%;
+  color: #ecf0f1;
+  padding: 1em;
 }
 
+.nav-links:hover {
+  transition: 0.3s ease-in;
+  background: rgb(52, 73, 94);
+}
+/* Showcase */
 .jumbotron {
   min-height: 100vh;
   padding-top: 3rem;
